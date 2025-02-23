@@ -20,7 +20,7 @@ builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
-        builder => builder.WithOrigins("http://localhost:5175") // Change your React URL
+        builder => builder.WithOrigins("*") // Change your React URL
                           .AllowAnyMethod()
                           .AllowAnyHeader());
 });
